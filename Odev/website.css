@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    margin-top: 0;
+    position: relative;
+    
+}
+
+.divBackground {
+    margin-top: 0;
+    background-image: url(/website/klavye.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    color: aliceblue;
+    display: flex;  /* Flexbox kullanımı */
+    justify-content: center;  /* İçerikleri yatayda ortalar */
+    align-items: flex-start;  /* İçerikleri dikeyde ortalar */
+    gap: 40px;  /* Divler arasındaki boşluk */
+    padding-top: 250px;
+    
+    
+}
+
+
+.divSol, .divOrta,.divSag {
+    width: 200px;
+    height: 300px;
+    
+    background-color: rgba(211, 211, 211, 0.47);
+    border-radius: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    overflow: auto;
+
+    
+
+    
+}
+
+.divSol:hover, .divOrta:hover, .divSag:hover {
+    transform: scale(1.1);
+}
+
+.divSol::-webkit-scrollbar, .divOrta::-webkit-scrollbar, 
+.divSag::-webkit-scrollbar {
+    width: 6px;  /* Kaydırma çubuğunun genişliği */
+}
+
+.divSol::-webkit-scrollbar-thumb, .divOrta::-webkit-scrollbar-thumb, 
+.divSag::-webkit-scrollbar-thumb {
+    background-color: rgba(29, 29, 29, 0.353);  /* Kaydırma çubuğunun rengi */
+    border-radius: 10px;
+}
+
+.divSol::-webkit-scrollbar-track , .divOrta::-webkit-scrollbar-track, 
+.divSag::-webkit-scrollbar-track{
+    background-color: rgba(211, 211, 211, 0.141);  /* Kaydırma çubuğunun arka planı */
+}
+
+
+.divVideo{
+    position: absolute;
+    bottom: 250px;  /* Sayfanın altına doğru 50px boşluk bırak */
+    left: 50%;
+    transform: translateX(-50%);  /* Ortalamak için */
+    width: 500px;
+    height: 300px;
+    background-color: rgba(100, 148, 237, 0.263);  /* CornflowerBlue yarı şeffaf */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+
+    
+
+    
+}
+
+.video-element {
+    width: 100%;
+    height: 80%;  /* Videonun yüksekliğini ayarlayın */
+    border-radius: 15px;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;  /* Videodan sonra biraz boşluk bırak */
+}
+
+.footer {
+    background-color: rgba(62, 55, 55, 0.689);  /* Arka plan rengi */
+    color: white;  /* Yazı rengi */
+    text-align: center;  /* Ortala */
+    position: absolute;  /* Position the footer absolutely */
+    bottom: 0;  /* Sayfanın en altına yerleşim */
+    left: 0;  /* Sol kenardan başla */
+    width: 100%;  /* Tüm genişlik */
+    height: 50px;  /* Footer yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;  /* Üstte kalmasını sağla */
+}
+
+.footer-content {
+    max-width: 1000px;  /* İçeriği sınırlamak için */
+    margin: 0 auto;  /* Ortalamak için */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color: rgba(62, 55, 55, 0);  /* Navbar arka plan rengi */
+    color: white;
+    padding: 20px 20px;  /* Üst ve alt boşluk */
+    position: absolute;/* Sayfanın üst kısmına sabitlenir */
+    top: 0;  /* Sayfanın en üstüne yerleşim */
+    width: 100%;  /* Tüm genişlik */
+    z-index: 20;  /* Diğer içeriklerin üstünde kalması için */
+    display: flex;  /* Flexbox kullanımı */
+    justify-content: space-between;  /* İçerikleri en sağa ve en sola yay */
+    align-items: center;  /* Dikeyde ortala */
+}
+
+.navbar-list {
+    list-style: none;  /* Noktaları kaldır */
+    display: flex;  /* Elemanları yan yana diz */
+    /* justify-content: space-around;  Eşit boşluklarla yay */
+    margin: 0;  /* Varsayılan kenar boşluğunu kaldır */
+    padding: 0;  /* Varsayılan iç kenar boşluğunu kaldır */
+    margin-left: 50px;
+   /* Elemanları sola hizala */
+
+}
+
+.navbar-list li {
+    margin: 15px;  /* Elemanlar arasındaki boşluk */
+}
+
+.navbar-list a {
+    color: white;  /* Yazı rengi */
+    text-decoration: none;  /* Altı çizgiyi kaldır */
+    font-size: 18px;  /* Yazı boyutu */
+}
+
+.navbar-list a:hover {
+    color: rgb(191, 102, 247);
+}
+/* Profil resmi için yuvarlak alan */
+.divFoto {
+    width: 100px;  /* Yuvarlağın genişliği */
+    height: 100px;  /* Yuvarlağın yüksekliği */
+    /* Yuvarlak şekil */
+    overflow: hidden;  /* Taşmaları önlemek için */
+    background-image: url('video/fotoğraf.jpg');  /* Fotoğrafınızı buraya ekleyin */
+    background-size: cover;  /* Resmin boyutunu yuvarlağa göre ayarla */
+    background-position: center;  /* Resmi ortala */
+    margin-left: auto;
+    margin-right: 50px;
+    border-radius: 50%;  /* Profil resminin yuvarlak olması için */
+}
+
+.navbar-list .dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    display: none;  /* Başlangıçta gizli */
+    position: absolute;  /* Ana öğenin hemen altında görüntülenir */
+    top: 100%;  /* Ana menünün hemen altında */
+    left: 0;
+    background-color: rgba(128, 128, 128, 0);
+    padding: 10px;
+    
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.dropdown-list li {
+    margin: 5px 0;
+}
+
+.dropdown-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;  /* Hover ile görünür yap */
+}
+
+/* Responsive ayarlar */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;  /* Mobil cihazlar için padding ayarı */
+    }
+
+    .divFoto {
+        width: 80px;  /* Mobil cihazlar için genişlik */
+        height: 80px;  /* Mobil cihazlar için yükseklik */
+    }
+
+    .navbar-list li {
+        margin: 10px;  /* Elemanlar arasındaki boşluk */
+    }
+}
